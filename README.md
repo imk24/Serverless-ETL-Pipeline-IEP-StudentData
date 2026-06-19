@@ -9,6 +9,7 @@ This project is an end-to-end, serverless ETL pipeline on AWS that ingests, tran
 - **Metadata:** AWS Glue Data Catalog
 - **Query Engine:** Amazon Athena
 - **BI / Dashboards:** Power BI via ODBC + Import
+Full Breakdown is in `architecture/architecture_dataflow`
 
 ### Workflow + Concepts
 
@@ -38,3 +39,11 @@ This project is an end-to-end, serverless ETL pipeline on AWS that ingests, tran
 - **Libraries:** Pandas, boto3
 - **BI:** Power BI (DirectQuery, Simba ODBC driver)
 
+## Getting Started
+
+- Upload raw CSV files to the `raw/` S3 bucket
+- Lambda ETL is triggered and processes and writes the cleaned data to `processed/` automatically
+- Athena queries the processed dataset through external tables
+- Power BI connects via ODBC for visualizations
+Detailed setup instructions are in `docs/setup_guide.md`
+- Connect to Power BI and click on the Get Data, and type into the search ODBC. Connect to proper DSN, this will pop up and select the table under the catalog, database, table drop down. <img width="510" height="346" alt="image" src="https://github.com/user-attachments/assets/b873930e-1d38-4b58-9a79-f3f9a67bc954" />

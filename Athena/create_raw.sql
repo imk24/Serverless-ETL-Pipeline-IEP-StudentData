@@ -1,9 +1,9 @@
 CREATE EXTERNAL TABLE IF NOT EXISTS etl_db.raw_iep_data (
-    role        string,
-    grade       int,
-    name        string,
-    class       string,
-    minutes     string
+    role string,
+    grade int,
+    name string,
+    class string,
+    minutes string
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (

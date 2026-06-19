@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE etl_db.raw_iep_data (
+CREATE EXTERNAL TABLE IF NOT EXISTS etl_db.raw_iep_data (
     role string,
     grade int,
     name string,

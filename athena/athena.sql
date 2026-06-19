@@ -10,5 +10,5 @@ WITH SERDEPROPERTIES (
   'escapeChar' = '\\'
 )
 STORED AS TEXTFILE
-LOCATION 's3://bucket-input-etl/processed/'
+LOCATION 's3://etl-bucket-proj/processed/'
 TBLPROPERTIES ('skip.header.line.count' = '1');

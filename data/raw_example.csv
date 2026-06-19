@@ -1,10 +1,13 @@
 Role, Grade, Name, Class, Minutes
 Teacher, 3, T1, Sped
 Teacher, 3, T2, Reading{Gen}
-Teacher, 5, T3, Sped
-Teacher, 3, T4, Math{Gen} SC{Gen}
-Teacher, 5, T5, Math{Gen} SC{Gen}
-Teacher, 5, T6, Reading{Gen} SS{Gen}
+Teacher, 2, T3, Sped
+Teacher, 5, T4, Sped
+Teacher, 3, T5, Math{Gen} SC{Gen}
+Teacher, 5, T6, Math{Gen} SC{Gen}
+Teacher, 5, T7, Reading{Gen} SS{Gen}
+Teacher, 2, T8, Math{Gen}
+Teacher, 2, T9, Reading{Gen}
 Student, 3, S1, Math{Gen} Reading{Gen} BS{Sped} Math{Sped}, 200 225 15 200
 Student, 5, S2, Reading{Gen} Math{Gen} SC{Gen} SS{Gen} Reading{Sped}, 200 300 150 150 150 
 Student, 5, S3, Math{Gen} Reading{Gen}, 225 225
@@ -14,13 +17,14 @@ Student, 5, S6, Reading{Gen} BS{Gen} Reading{Sped} Math{Sped}, 225 150 150 225
 Student, 3, S7, Math{Gen} Reading{Gen}, 150 150
 Student, 5, S8, Reading{Gen} BS{Gen} Reading{Sped}, 225 225 150
 Student, 5, S9, Reading{Gen} BS{Gen} Math{Gen} Reading{Sped} Writing{Gen}, 150 150 150 150 150
-Student, 5, S10, Reading{Gen}, 150
+Student, 2, S10, Reading{Gen}, 150
 Student, 5, S11, Reading{Gen} BS{Gen}, 225 150
 Student, 3, S12, Reading{Gen} Math{Gen} BS{Gen} Reading{Sped}, 300 150 150 150
 Student, 5, S13, Reading{Sped} Reading{Gen} BS{Gen}, 150 300 150
 Student, 3, S14, Reading{Gen} Math{Gen} SC{Gen} SS{Gen}, 225 225 150 150
 Student, 5, S15, Reading{Sped} Reading{Gen} BS{Gen} SSkills{Gen}, 150 225 150 300
-Student, 5, S16, Reading{Sped} Reading{Gen}, 150 300
+Student, 2, S16, Reading{Sped} Reading{Gen}, 150 300
 Student, 5, S17, Reading{Gen} Math{Gen} Reading{Sped} Math{Sped} SS{Gen} SC{Gen}, 225 225 150 100 150 150
+Student, 2, S18, Math{Gen}, 100
 
 

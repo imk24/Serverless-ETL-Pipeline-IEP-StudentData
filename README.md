@@ -35,9 +35,9 @@ Full Breakdown is in `architecture/architecture_diagram`
 ## Tech stack
 
 - **AWS:** S3, Lambda, Glue, Athena, IAM
-- **Language:** Python 3.x
+- **Language:** Python 3.14
 - **Libraries:** Pandas, boto3
-- **BI:** Power BI (DirectQuery, Simba ODBC driver)
+- **BI** Power BI Import + ODBC driver
 
 ## Getting Started
 

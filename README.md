@@ -10,7 +10,7 @@ This project is an end-to-end, serverless ETL pipeline on AWS that ingests, tran
 - **Query Engine:** Amazon Athena
 - **BI / Dashboards:** Power BI via ODBC + Import
 
-### High-level flow
+### Workflow + Concepts
 
 1. **Raw data upload** → dropped into an S3 `raw/` bucket.
 2. **S3 event notification** → triggers a Lambda ETL function.
@@ -37,8 +37,5 @@ This project is an end-to-end, serverless ETL pipeline on AWS that ingests, tran
 - **Language:** Python 3.x
 - **Libraries:** Pandas, boto3
 - **BI:** Power BI (DirectQuery, Simba ODBC driver)
-
-## Getting started
-
-   cd aws-serverless-iep-etl-pipeline
+rless-iep-etl-pipeline
 

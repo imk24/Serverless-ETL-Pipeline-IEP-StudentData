@@ -1,6 +1,14 @@
-# AWS Serverless IEP ETL Pipeline
+# Overview
 
-This project is an end-to-end, serverless ETL pipeline on AWS that ingests, transforms, and analyzes anonymized IEP (Individualized Education Program) student data. It uses event-driven automation with S3 and AWS Lambda, and exposes the processed data through Athena and Power BI for analytics and reporting.
+This repository documents an end‑to‑end, serverless ETL pipeline built on Amazon Web Services to ingest, clean, and transform raw IEP (Individualized Education Program) student data. The pipeline automates data processing using S3 event triggers and AWS Lambda, stores cleaned outputs in S3, and exposes the processed dataset through Athena for analysis and visualization in Power BI.
+
+The project demonstrates how cloud‑native, event‑driven architecture can streamline data workflows while maintaining strict privacy controls through anonymized, codename‑based student identifiers.
+
+## Objective
+
+ - The primary objective of this project was to support a local elementary school in organizing, analyzing, and acting on IEP-related student data through a scalable, serverless cloud environment.
+- By integrating Athena with Power BI, the solution enabled stakeholders to visualize key trends such as subject-specific support and instructional workload distribution through interactive dashboards.
+- The automated ETL workflow reduced manual data preparation and cleaning efforts, allowing staff to spend less time managing spreadsheets and more time making data-informed decisions.  
 
 ## Architecture
 

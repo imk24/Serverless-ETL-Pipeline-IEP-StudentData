@@ -30,6 +30,14 @@ SELECT grade, class
   GROUP BY grade, class
   ORDER BY grade;
 
+--Groups all classses and displays all occurences across all grades
+SELECT
+    class,
+    COUNT(*) AS occurrences
+  FROM raw_data
+  GROUP BY class
+  ORDER BY occurrences DESC;
+
 ---Processed---
 --All Processed Records
 SELECT *

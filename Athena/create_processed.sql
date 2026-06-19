@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE etl_db.etl_cleaned (
+CREATE EXTERNAL TABLE  IF NOT EXISTS etl_db.etl_cleaned (
   name string,
   grade string,
   class string

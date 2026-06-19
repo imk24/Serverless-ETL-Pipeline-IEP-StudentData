@@ -1,1 +1,5 @@
+#Architecture Diagram - Severless IEP ETL Pipeline
+
+Raw CSV Upload -> S3 Event Trigger -> Lambda (Python / Pandas) -> Processed Output -> Glue Data Catalog  -> Athena -> Power BI via ODBC Connection  
+
 

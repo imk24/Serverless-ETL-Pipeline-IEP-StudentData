@@ -1,0 +1,51 @@
+┌──────────────────────────┐
+│      Data Provider       │
+│ (Anonymized IEP CSVs)    │
+└─────────────┬────────────┘
+│  Upload
+▼
+┌──────────────────────────┐
+│      Amazon S3 (raw)     │
+│   s3://.../raw/          │
+└─────────────┬────────────┘
+│  S3 Event Trigger (PUT)
+▼
+┌──────────────────────────┐
+│   AWS Lambda (ETL)       │
+│ Python + Pandas          │
+│ - Deduplicates           |
+| - Cleans data            │
+│ - Normalizes schema      │
+│ - Maps teacher           │
+└─────────────┬────────────┘
+│  Write processed output
+▼
+┌──────────────────────────┐
+│   Amazon S3 (processed)  │
+│   s3://.../processed/    │
+└─────────────┬────────────┘
+│  Schema-on-read
+▼
+┌──────────────────────────┐
+│ AWS Glue Data Catalog    │
+│  - Meta data             |
+|  - raw + processed       │
+└─────────────┬────────────┘
+│  SQL Queries
+▼
+┌──────────────────────────┐
+│      Amazon Athena       │
+│ External Tables over S3  │
+└─────────────┬────────────┘
+│  Query Results
+▼
+┌──────────────────────────┐
+│  S3 (Athena Query Output)│
+│ s3://athena-query-results│
+└─────────────┬────────────┘
+│  ODBC (Simba Driver)
+▼
+┌──────────────────────────┐
+│       Power BI Desktop   │
+│  DirectQuery Dashboards  │
+└──────────────────────────┘

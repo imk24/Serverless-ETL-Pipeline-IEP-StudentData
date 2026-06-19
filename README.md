@@ -37,5 +37,4 @@ This project is an end-to-end, serverless ETL pipeline on AWS that ingests, tran
 - **Language:** Python 3.x
 - **Libraries:** Pandas, boto3
 - **BI:** Power BI (DirectQuery, Simba ODBC driver)
-rless-iep-etl-pipeline
 

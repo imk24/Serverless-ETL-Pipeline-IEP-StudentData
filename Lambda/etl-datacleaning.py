@@ -40,24 +40,23 @@ def lambda_handler(event, context):
             lst.append([])
 
         for i in range(len(df)):
-            for col in df.columns:
-                if df.loc[i]['role'] == 'Student':
+            if df.loc[i]['role'] == 'Student':
+                
+                #adds each student name and appropriate data
+                if not df.loc[i]['name'].strip() in lst[0]:
+                    lst[0].append(df.loc[i]['name'].strip())
+                    lst[1].append(str(df.loc[i]['grade']).strip())
+                    d['name'] = lst[0]
+                    d['grade'] = lst[1]
                     
-                    #adds each student name and appropriate data
-                    if not df.loc[i]['name'].strip() in lst[0]:
-                        lst[0].append(df.loc[i]['name'].strip())
-                        lst[1].append(str(df.loc[i]['grade']).strip())
-                        d['name'] = lst[0]
-                        d['grade'] = lst[1]
-                        
-                        #Code for adding the appropriate class into the dictionary
-                        combine = []
-                        for j in range(len(df.loc[i]['class'].split())):
-                            if not df.loc[i]['class'].split()[j] + str(df.loc[i]['minutes'].split()[j]) in combine:
-                                found = teacher_lookup.get((str(df.loc[i]['grade']), df.loc[i]['class'].split()[j]))
-                                if found != None:
-                                    combine.append(found + " " + df.loc[i]['class'].split()[j] + " " + str(df.loc[i]['minutes'].split()[j]))
-                        lst[2].append(combine)
+                    #Code for adding the appropriate class into the dictionary
+                    combine = []
+                    for j in range(len(df.loc[i]['class'].split())):
+                        if not df.loc[i]['class'].split()[j] + str(df.loc[i]['minutes'].split()[j]) in combine:
+                            found = teacher_lookup.get((str(df.loc[i]['grade']), df.loc[i]['class'].split()[j]))
+                            if found != None:
+                                combine.append(found + " " + df.loc[i]['class'].split()[j] + " " + str(df.loc[i]['minutes'].split()[j]))
+                    lst[2].append(combine)
                         
         d['class'] = [','.join(t) for t in lst[2]]
             

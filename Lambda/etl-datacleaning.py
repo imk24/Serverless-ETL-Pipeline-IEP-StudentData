@@ -55,9 +55,8 @@ def lambda_handler(event, context):
                 
                 #checks if name is in set then adds name and 
                 name = df.at[i,'name'].strip()
-                if name not in seen:
-                    seen.add(name)
-                    
+                if (name, str(df.at[i, 'grade']).strip()) not in seen:
+                    seen.add((name, str(df.at[i, 'grade']).strip()))
                     #Appends name and grade to respective place
                     lst[0].append(name)
                     lst[1].append(str(df.at[i,'grade']).strip())

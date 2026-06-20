@@ -88,7 +88,7 @@ def lambda_handler(event, context):
                                     
                             #If not Sped adds to not found
                             else:
-                                entry = f"Not Listed {clss} {mins}"
+                                entry = f"{clss} {mins}"
                                 if entry not in nf_combine:
                                     nf_combine.add(entry)
                                     

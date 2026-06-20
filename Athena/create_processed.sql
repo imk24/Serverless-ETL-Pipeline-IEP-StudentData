@@ -2,6 +2,7 @@ CREATE EXTERNAL TABLE  IF NOT EXISTS etl_db.etl_cleaned (
   name string,
   grade string,
   class string
+  unlisted string
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (

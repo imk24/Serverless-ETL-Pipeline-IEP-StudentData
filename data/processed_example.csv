@@ -1,19 +1,19 @@
-name,grade,class
-S1,3,"T5 Math{Gen} 200,T2 Reading{Gen} 225"
-S2,5,"T7 Reading{Gen} 200,T6 Math{Gen} 300,T6 SC{Gen} 150,T7 SS{Gen} 150"
-S3,5,"T6 Math{Gen} 225,T7 Reading{Gen} 225"
-S4,5,T6 Math{Gen} 150
-S5,3,"T5 Math{Gen} 300,T2 Reading{Gen} 300"
-S6,5,T7 Reading{Gen} 225
-S7,3,"T5 Math{Gen} 150,T2 Reading{Gen} 150"
-S8,5,T7 Reading{Gen} 225
-S9,5,"T7 Reading{Gen} 150,T6 Math{Gen} 150"
-S10,2,T9 Reading{Gen} 150
-S11,5,T7 Reading{Gen} 225
-S12,3,"T2 Reading{Gen} 300,T5 Math{Gen} 150"
-S13,5,T7 Reading{Gen} 300
-S14,3,"T2 Reading{Gen} 225,T5 Math{Gen} 225,T5 SC{Gen} 150"
-S15,5,T7 Reading{Gen} 225
-S16,2,T9 Reading{Gen} 300
-S17,5,"T7 Reading{Gen} 225,T6 Math{Gen} 225,T7 SS{Gen} 150,T6 SC{Gen} 150"
-S18,2,T8 Math{Gen} 100
+name,grade,class,unlisted
+S1,3,"T1 Math{Sped} 200,T1 BS{Sped} 15,T5 Math{Gen} 200,T2 Reading{Gen} 225",
+S2,5,"T7 Reading{Gen} 200,T7 SS{Gen} 150,T6 Math{Gen} 300,T6 SC{Gen} 150,T4 Reading{Sped} 150",
+S3,5,"T6 Math{Gen} 225,T7 Reading{Gen} 225",
+S4,5,"T6 Math{Gen} 150,T4 Math{Sped} 100",BS{Gen} 150
+S5,3,"T5 Math{Gen} 300,T2 Reading{Gen} 300,T1 Reading{Sped} 150",BS{Gen} 250
+S6,5,"T4 Reading{Sped} 150,T4 Math{Sped} 225,T7 Reading{Gen} 225",BS{Gen} 150
+S7,3,"T5 Math{Gen} 150,T2 Reading{Gen} 150",
+S8,5,"T4 Reading{Sped} 150,T7 Reading{Gen} 225",BS{Gen} 225
+S9,5,"T4 Reading{Sped} 150,T7 Reading{Gen} 150,T6 Math{Gen} 150","BS{Gen} 150,Writing{Gen} 150"
+S10,2,T9 Reading{Gen} 150,
+S11,5,T7 Reading{Gen} 225,BS{Gen} 150
+S12,3,"T5 Math{Gen} 150,T2 Reading{Gen} 300,T1 Reading{Sped} 150",BS{Gen} 150
+S13,5,"T7 Reading{Gen} 300,T4 Reading{Sped} 150",BS{Gen} 150
+S14,3,"T5 SC{Gen} 150,T5 Math{Gen} 225,T2 Reading{Gen} 225",SS{Gen} 150
+S15,5,"T4 Reading{Sped} 150,T7 Reading{Gen} 225","BS{Gen} 150,SSkills{Gen} 300"
+S16,2,"T9 Reading{Gen} 300,T3 Reading{Sped} 150",
+S17,5,"T7 SS{Gen} 150,T7 Reading{Gen} 225,T6 SC{Gen} 150,T4 Reading{Sped} 150,T4 Math{Sped} 100,T6 Math{Gen} 225",
+S18,2,T8 Math{Gen} 100,

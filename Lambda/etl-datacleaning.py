@@ -81,7 +81,7 @@ def lambda_handler(event, context):
                             
                             #Checks if class is sped and adds to found
                             sped_teacher = teacher_lookup.get((str(df.loc[i]['grade']), 'Sped'))
-                            if sped_teacher:
+                            if 'Sped' in clss and sped_teacher != None:
                                 entry = f"{sped_teacher} {clss} {mins}"
                                 if entry not in f_combine:
                                     f_combine.add(entry)
@@ -106,8 +106,7 @@ def lambda_handler(event, context):
         d['unlisted'] = [','.join(t) for t in lst[3]]
         
         e_df = pd.DataFrame(d)
-
-
+        
         output_key = f"processed/ETL_{os.path.basename(key)}"
         buffer = io.StringIO()
         e_df.to_csv(buffer, index = False)

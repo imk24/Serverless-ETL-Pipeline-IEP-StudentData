@@ -44,43 +44,43 @@ def lambda_handler(event, context):
         
         #Makes a student dictionary for easy lookup with associated class and associated minutes
         for i in range(len(df)):
-            if df.loc[i]['role'] == 'Student':
-                s_class[df.loc[i]['name'].strip(), str(df.loc[i]['grade'])] = df.loc[i]['class'].split()
-                s_min[df.loc[i]['name'].strip(), str(df.loc[i]['grade'])] = df.loc[i]['minutes'].split()
+            if df.at[i,'role'] == 'Student':
+                s_class[df.at[i,'name'].strip(), str(df.at[i,'grade'])] = df.at[i,'class'].split()
+                s_min[df.at[i,'name'].strip(), str(df.at[i,'grade'])] = df.at[i,'minutes'].split()
         
         #Creates a set seen to check if name has already been seen agmost students
         seen = set()
         for i in range(len(df)):
-            if df.loc[i]['role'] == 'Student':
+            if df.at[i,'role'] == 'Student':
                 
                 #checks if name is in set then adds name and 
-                name = df.loc[i]['name'].strip()
+                name = df.at[i,'name'].strip()
                 if name not in seen:
                     seen.add(name)
                     
                     #Appends name and grade to respective place
                     lst[0].append(name)
-                    lst[1].append(str(df.loc[i]['grade']).strip())
+                    lst[1].append(str(df.at[i,'grade']).strip())
                     d['name'] = lst[0]
                     d['grade'] = lst[1]
                     
                     #Two sets, found and not found, adds teachers if found in combine and vice versa
                     f_combine = set()
                     nf_combine = set()
-                    for k in range(len(s_class[df.loc[i]['name'].strip(), str(df.loc[i]['grade'])])):
+                    for k in range(len(s_class[df.at[i,'name'].strip(), str(df.at[i,'grade'])])):
                         
                         #Creates variables minutes and class to reduce complexity
-                        mins = str(s_min[(df.loc[i]['name'].strip(), str(df.loc[i]['grade']))] [k])
-                        clss = s_class[(df.loc[i]['name'].strip(), str(df.loc[i]['grade']))][k]
+                        mins = str(s_min[(df.at[i,'name'].strip(), str(df.at[i,'grade']))] [k])
+                        clss = s_class[(df.at[i,'name'].strip(), str(df.at[i,'grade']))][k]
                         
                         #Found statement
-                        found = teacher_lookup.get((str(df.loc[i]['grade']), clss))
+                        found = teacher_lookup.get((str(df.at[i,'grade']), clss))
                         
                         #In the event if no teacher is found
                         if found == None:
                             
                             #Checks if class is sped and adds to found
-                            sped_teacher = teacher_lookup.get((str(df.loc[i]['grade']), 'Sped'))
+                            sped_teacher = teacher_lookup.get((str(df.at[i,'grade']), 'Sped'))
                             if 'Sped' in clss and sped_teacher != None:
                                 entry = f"{sped_teacher} {clss} {mins}"
                                 if entry not in f_combine:

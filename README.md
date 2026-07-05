@@ -1,6 +1,6 @@
 # Overview
 
-This repository documents an end‑to‑end, serverless ETL pipeline built on Amazon Web Services to ingest, clean, and transform raw IEP (Individualized Education Program) student data. The pipeline automates data processing using S3 event triggers and AWS Lambda, stores cleaned outputs in S3, and exposes the processed dataset through Athena for analysis and visualization in Power BI.
+This repository documents an end‑to‑end, serverless ETL pipeline built on Amazon Web Services to ingest, clean, and transform raw student data. The pipeline automates data processing using S3 event triggers and AWS Lambda, stores cleaned outputs in S3, and exposes the processed dataset through Athena for analysis and visualization in Power BI.
 
 The project demonstrates how cloud‑native, event‑driven architecture can streamline data workflows while maintaining strict privacy controls through anonymized, codename‑based student identifiers.
 
